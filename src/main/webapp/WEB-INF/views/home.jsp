@@ -1,64 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<html lang="ko-KR" prefix="og: http://ogp.me/ns#"
-	class="js quform-js supports no-forcetouch cssanimations cssfilters csstransforms csstransforms3d csstransitions no-touchevents mobile-false js csstransitions js csstransitions js_active  vc_desktop  vc_transform  vc_transform not-iOS"
-	style="">
-<!--<![endif]-->
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="http://hanainterior.net/xmlrpc.php">
-<script type="text/javascript" async=""
-	src="https://www.google-analytics.com/analytics.js"></script>
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>(function(h,c){h[c]=h[c]+(h[c]&&' ')+'quform-js'})(document.documentElement,'className');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
 <title>다솜인테리어</title>
 
-<!-- This site is optimized with the Yoast SEO plugin v5.8 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description"
-	content="아파트 리모델링전문, 30년 노하우, 완벽한시작 감동적인마무리 다솜인테리어">
-<link rel="canonical" href="http://hanainterior.net/">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:type" content="website">
-<meta property="og:title" content="다솜인테리어">
-<meta property="og:description"
-	content="아파트 리모델링전문, 30년 노하우, 완벽한시작 감동적인마무리 다솜인테리어">
-<meta property="og:url" content="http://hanainterior.net/">
-<meta property="og:site_name" content="다솜인테리어">
-<meta property="og:image"
-	content="http://duq8943.cafe24.com/wp-content/uploads/2017/09/등록증.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:description"
-	content="아파트 리모델링전문, 30년 노하우, 완벽한시작 감동적인마무리 다솜인테리어">
-<meta name="twitter:title" content="다솜인테리어">
-<meta name="twitter:image"
-	content="http://duq8943.cafe24.com/wp-content/uploads/2017/09/등록증.jpg">
-<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/hanainterior.net\/","name":"\ud558\ub098\uc778\ud14c\ub9ac\uc5b4","potentialAction":{"@type":"SearchAction","target":"http:\/\/hanainterior.net\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<!-- / Yoast SEO plugin. -->
-
-
-<!-- WordPress KBoard plugin 5.3.3 - http://www.cosmosfarm.com/products/kboard -->
-<link rel="alternate"
-	href="http://hanainterior.net/wp-content/plugins/kboard/rss.php"
-	type="application/rss+xml" title="다솜인테리어 » KBoard 통합 피드">
-<!-- WordPress KBoard plugin 5.3.3 - http://www.cosmosfarm.com/products/kboard -->
-
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//s.w.org">
-<link rel="alternate" type="application/rss+xml" title="다솜인테리어 » 피드"
-	href="http://hanainterior.net/feed/">
-<link rel="alternate" type="application/rss+xml" title="다솜인테리어 » 댓글 피드"
-	href="http://hanainterior.net/comments/feed/">
-<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/hanainterior.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.3"}};
-			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-<script
-	src="http://hanainterior.net/wp-includes/js/wp-emoji-release.min.js?ver=4.9.3"
-	type="text/javascript" defer=""></script>
 <style type="text/css">
 img.wp-smiley, img.emoji {
 	display: inline !important;
@@ -94,9 +42,6 @@ img.wp-smiley, img.emoji {
 	href="http://hanainterior.net/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.5.2"
 	type="text/css" media="all">
 <style id="rs-plugin-settings-inline-css" type="text/css">
-#rs-demo-id {
-	
-}
 
 .tp-caption.NotGeneric-Title, .NotGeneric-Title {
 	color: rgba(255, 255, 255, 1.00);
@@ -211,9 +156,6 @@ img.wp-smiley, img.emoji {
 <link rel="stylesheet" id="dt-main-css"
 	href="http://hanainterior.net/wp-content/themes/dt-the7/css/main.min.css?ver=5.6.0.1"
 	type="text/css" media="all">
-<!--[if lt IE 10]>
-<link rel='stylesheet' id='dt-old-ie-css'  href='http://hanainterior.net/wp-content/themes/dt-the7/css/old-ie.min.css?ver=5.6.0.1' type='text/css' media='all' />
-<![endif]-->
 <link rel="stylesheet" id="dt-awsome-fonts-css"
 	href="http://hanainterior.net/wp-content/themes/dt-the7/fonts/FontAwesome/css/font-awesome.min.css?ver=5.6.0.1"
 	type="text/css" media="all">
@@ -848,22 +790,7 @@ var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Twee
 						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173 first has-children"><a
 						href="/8-2/" data-level="1"><span class="menu-item-text"><span
 								class="menu-text">오시는 길</span></span></a><i class="next-level-button"></i>
-					<!-- <ul class="sub-nav hover-style-bg level-arrows-on">
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 first"><a
-								href="http://hanainterior.net/8-2/" data-level="2"><span
-									class="menu-item-text"><span class="menu-text">인사말</span></span></a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a
-								href="http://hanainterior.net/%ec%8b%9c%ea%b3%b5%ec%8b%a4%ec%a0%81/"
-								data-level="2"><span class="menu-item-text"><span
-										class="menu-text">시공실적</span></span></a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a
-								href="http://hanainterior.net/%ec%98%a4%ec%8b%9c%eb%8a%94-%ea%b8%b8/"
-								data-level="2"><span class="menu-item-text"><span
-										class="menu-text">오시는 길</span></span></a></li>
-						</ul> --></li>
+					</li>
 					<li
 						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a
 						href="http://hanainterior.net/%ec%8b%9c%ea%b3%b5%ec%a0%84%ed%9b%84/"
@@ -879,31 +806,7 @@ var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Twee
 						href="http://hanainterior.net/%ea%b2%ac%ec%a0%81%ec%83%81%eb%8b%b4/"
 						data-level="1"><span class="menu-item-text"><span
 								class="menu-text">견적문의</span></span></a></li>
-					<!-- <li
-						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a
-						href="http://hanainterior.net/%ec%8b%9c%ea%b3%b5%ed%9b%84%ea%b8%b0/"
-						data-level="1"><span class="menu-item-text"><span
-								class="menu-text">시공후기</span></span></a></li>
-					<li
-						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-165 has-children"><a
-						href="/공지사항/" data-level="1"><span class="menu-item-text"><span
-								class="menu-text">커뮤니티</span></span></a><i class="next-level-button"></i>
-					<ul class="sub-nav hover-style-bg level-arrows-on">
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41 first"><a
-								href="http://hanainterior.net/%ea%b3%b5%ec%a7%80%ec%82%ac%ed%95%ad/"
-								data-level="2"><span class="menu-item-text"><span
-										class="menu-text">공지사항</span></span></a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a
-								href="http://hanainterior.net/qa/" data-level="2"><span
-									class="menu-item-text"><span class="menu-text">Q&amp;A</span></span></a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
-								href="http://hanainterior.net/%ed%8c%8c%ed%8a%b8%eb%84%88/"
-								data-level="2"><span class="menu-item-text"><span
-										class="menu-text">파트너</span></span></a></li>
-						</ul></li> -->
+			
 				</ul>
 
 			</header>
