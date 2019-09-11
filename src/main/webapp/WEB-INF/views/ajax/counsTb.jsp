@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <div>
 <div class="container">
-	<h2>다솜 견적문의</h2>
+	<h4>다솜 견적문의</h4>
+	
 	<table class="table">
 		<thead>
 			<tr>
@@ -25,6 +26,14 @@
 			
 		</tbody>
 	</table>
+	<div class="couns_btn_div">
+		<input class="couns_btn" type=button value="작성하기"/>
+	</div>
+	<!-- 페이지네이션 시작  -->
+	<div>
+	
+	</div>
+	<!-- 페이지네이션 끝 -->
 </div>
 
 </div>

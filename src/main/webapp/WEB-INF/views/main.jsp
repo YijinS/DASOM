@@ -123,7 +123,7 @@
 			
 			
 			<!-- 견적상담 start -->
-			<div class="dasom_couns">
+			<div id="dasom_couns">
 			
 			</div>
 			<!-- 견적상담 end -->
@@ -142,7 +142,8 @@
 <script>
 $(function(){
 
-	startTakeCounsDiv();
+	 var context = '${pageContext.request.contextPath}';
+	startTakeCounsDiv(context);
 	
 })
 </script>
