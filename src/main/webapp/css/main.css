@@ -1,0 +1,80 @@
+@charset "EUC-KR";
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+	z-index: 11
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+	z-index: 11
+}
+
+.banner_layer {
+	z-index: 10;
+	position: absolute;
+	margin-top: 10%;
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+	width: 100%;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+.banner_layer .second {
+	color: black;
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.div_third {
+	margin-top: 30px;
+}
+
+.banner_layer .third {
+	font-size: 1.4rem;
+}
+
+.portPolio {
+	margin-top: 30px
+}
+
+.portPolio_head {
+	border-top: 1px solid #bebebe;
+	text-align: center;
+}
+
+.portPolio_body {
+	margin-top: 30px;
+}
+
+.dasom_port_img {
+	width: 100%;
+	opacity: 0.4;
+	transition: opacity 0.5s ease;
+}
+.dasom_port_img:hover{
+    opacity: 1;
+   
+}
+
+.portPolio_foot{
+	margin: 50px;
+}
+
+.portPolio_foot_img{
+    margin: auto;
+    border: none;
+    padding: 10px 20px;
+    background: cadetblue;
+    color: white;
+    font-weight: 700;
+    
+}
+
+
+.dasom_port_img_wrap{
+	background: black;
+    width: fit-content;
+}
+footer{
+	    height: 100px;
+    background: #d4d4d4;
+}
