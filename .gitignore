@@ -1,0 +1,9 @@
+.metadata
+tmp/
+*.bak
+.settings/
+.recommenders/
+RemoteSystemsTempFiles/
+Servers/
+/target/
+bin/
