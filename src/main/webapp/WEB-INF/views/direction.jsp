@@ -151,12 +151,11 @@ html, body {
 </style>
 </head>
 <body>
-
+<jsp:include page="comm/header.jsp" />
 	<div id="content_wrap">
-		<div class="">
-			<jsp:include page="comm/header.jsp" />
+		<div class="head_img_div">
+			<img class="head_img" src="http://hanainterior.net/wp-content/uploads/2017/09/메인슬라이드-3.jpg" >
 		</div>
-
 		<div class="introduce">
 			<span>저희 <strong>다솜인테리어</strong>는 백석동 이마트(클래식동물병원) 바로맞은편</span>
 			<br>
@@ -224,14 +223,8 @@ html, body {
 		</script>
 	</div>
 
-	<!-- footer start  -->
-	<footer>
-		<p>Posted by: Hege Refsnes</p>
-		<p>
-			Contact information: <a href="mailto:someone@example.com">
-				someone@example.com</a>.
-		</p>
-	</footer>
-	<!-- footer end  -->
+	
+
+		<jsp:include page="comm/footer.jsp" />
 </body>
 </html>
