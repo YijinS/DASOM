@@ -2,9 +2,15 @@
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+<style>
+h3{text-align: center; margin: 25px;}
+table, tbody, td, tr{text-align: center;}
+.container{border-top: 1px solid #bebebe;}
+
+</style>
 <div>
 <div class="container">
-	<h4>다솜 견적문의</h4>
+	<h3>다솜 견적문의</h3>
 	
 	<table class="table">
 		<thead>
@@ -16,8 +22,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:if test="${  !(resultList.length > 0) }" >
-				<tr >
+			<c:if test="${!(resultList.length > 0) }" >
+				<tr>
 					<td colspan="4">
 						등록된 글이 없습니다. 
 					</td>
@@ -27,7 +33,7 @@
 		</tbody>
 	</table>
 	<div class="couns_btn_div">
-		<input class="couns_btn" type=button value="작성하기"/>
+		<a class="couns_btn" href="${pageContext.request.contextPath }/counsform.do" >작성하기</a>
 	</div>
 	<!-- 페이지네이션 시작  -->
 	<div>

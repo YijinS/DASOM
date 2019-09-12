@@ -6,6 +6,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  
    <mappers>
    		<mapper resource="com/dasomcompany/mybatis/AdminMapper.xml"/>
+   		<mapper resource="com/dasomcompany/mybatis/CounsMapper.xml"/>
    </mappers>
 </configuration>
 

@@ -5,12 +5,14 @@
 		<result property="id" column="ID" />
 		<result property="pwd" column="PWD" />
 	</resultMap>
-
-
-
-
-
-
+	
+	<select id="getData" parameterType="string" resultMap="AdminDto">
+		SELECT * FROM ADMIN WHERE ID = #{id}
+	</select>
+	
+	<select id="isExist" parameterType="map" resultType="string">
+		SELECT ID FROM ADMIN WHERE ID = #{id}
+	</select>
 
 
 

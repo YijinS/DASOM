@@ -74,7 +74,7 @@
 			<!-- portpolio start -->
 			<div class="container portPolio">
 				<div class="row portPolio_head">				
-					<h3 class="portPolio_head_h3">다솜 포트폴리오</h3>
+					<h3 class="portPolio_head_h3">다솜 시공사진</h3>
 					<h6 class="portPolio_head_h6">마우스를 이미지로 올려주시면 밝고 선명하게 보실 수 있습니다.</h6>
 				</div>
 				<div class="row portPolio_body">
