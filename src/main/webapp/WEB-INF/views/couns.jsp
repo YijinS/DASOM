@@ -4,6 +4,7 @@
 <html lang="ko-KR">
 
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <jsp:include page="../inc/incHead.jsp" />
 </head>
@@ -12,11 +13,59 @@
 </style>
 <body>
 	<div>
+		<div class="header_fix">
+	<header>
+
 		<div class="">
-			<jsp:include page="comm/header.jsp" />
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand"
+					href="${pageContext.request.contextPath}/main.do">다솜 인테리어</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<c:choose>
+							<c:when test="${empty sessionScope.admin }">
+								<li class="nav-item"><a class="nav-link"
+									href="${pageContext.request.contextPath }/direction.do">오시는
+										길</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">시공사진</a>
+								</li>
+								<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath }/couns.do">시공후기</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/faq.do">자주 묻는 질문</a>
+								<li class="nav-item form"><a class="nav-link" href="https://form.office.naver.com/form/responseView.cmd?formkey=MjY2OTkwMjAtYTlkYy00YmU3LTlkMGQtMjUzMGNkMmE3NTcy&sourceId=urlshare"  target="_blank" >견적문의</a></li>
+							</c:when>
+							<c:otherwise>
+								<c:choose>
+									<c:when test="${sessionScope.admin.id eq 'root' }">
+										<li class="nav-item"><a class="nav-link" href="#">관리자
+												님</a></li>
+										<li class="nav-item"><a class="nav-link"
+											href="${pageContext.request.contextPath }/logout">로그아웃</a></li>
+									</c:when>
+								</c:choose>
+							</c:otherwise>
+						</c:choose>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search"
+							placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
 		</div>
-
+	</header>
+</div>
+		<div class="head_img_div">
+			<img class="head_img" src="http://hanainterior.net/wp-content/uploads/2017/09/메인슬라이드-3.jpg" >
+		</div>
 		<table class="table">
 			<thead>
 				<tr>
@@ -35,8 +84,7 @@
 						<td>${list.num}</td>
 						<td style="text-align: left; padding-left: 30px;">
 						<a href="detail.do?num=${list.num}">${list.title}</a></td>
-						<td><a class="btn_attach" href="#none"
-							onclick="fileDownload(24)"></a></td>
+						<td>${list.name}</td>	
 						<td>${regDate}</td>
 						<td>${list.hit}</td>
 					</tr>
@@ -99,16 +147,6 @@
 			
 	</div>
 <jsp:include page="comm/footer.jsp" />
-	
-		<!-- footer start  -->
-		<footer>
-			<p>Posted by: Hege Refsnes</p>
-			<p>
-				Contact information: <a href="mailto:someone@example.com">
-					someone@example.com</a>.
-			</p>
-		</footer>
-		<!-- footer end  -->
 
 
 </body>

@@ -9,7 +9,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 
 <jsp:include page="../inc/incHead.jsp" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 </head>
 <title>견적 문의</title>
 <style>

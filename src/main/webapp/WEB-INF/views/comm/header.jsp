@@ -7,10 +7,9 @@
 <div class="">
 	<header>
 
-		<div class="">
+		<div class="header_fix">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand"
-					href="${pageContext.request.contextPath}/main.do">다솜 인테리어</a>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/main.do">다솜 인테리어</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -22,18 +21,15 @@
 					<ul class="navbar-nav mr-auto">
 						<c:choose>
 							<c:when test="${empty sessionScope.admin }">
-								<!--     <li class="nav-item active">
-					        <a class="nav-link" href="#">오시는 길 <span class="sr-only">(current)</span></a>
-					      </li> -->
-								<li class="nav-item"><a class="nav-link"
-									href="${pageContext.request.contextPath }/direction.do">오시는
-										길</a></li>
+								<li class="nav-item">
+								<a class="nav-link" href="${pageContext.request.contextPath }/direction.do">오시는 길</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">시공사진</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="#">시공후기</a>
+								<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/couns.do">시공후기</a>
 								</li>
-								<li class="nav-item"><a class="nav-link"
-									href="${pageContext.request.contextPath }/couns.do">견적문의</a></li>
+								<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/faq.do">자주 묻는 질문</a>
+								<li class="nav-item form"><a class="nav-link" href="https://form.office.naver.com/form/responseView.cmd?formkey=MjY2OTkwMjAtYTlkYy00YmU3LTlkMGQtMjUzMGNkMmE3NTcy&sourceId=urlshare"  target="_blank">견적문의</a></li>
+								</li>
 							</c:when>
 							<c:otherwise>
 								<c:choose>

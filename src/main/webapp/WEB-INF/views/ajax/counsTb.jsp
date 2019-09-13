@@ -12,7 +12,7 @@ a {color:#222;}
 </style>
 <div>
 <div class="container couns_wrap">
-	<h3>다솜 견적문의</h3>
+	<h3>다솜 시공후기</h3>
 	
 	<table class="table">
 		<thead>
@@ -30,8 +30,7 @@ a {color:#222;}
 						<tr>
 							<td>${list.num}</td>
 							<td style="text-align: left; padding-left: 30px;"><a href="detail.do?num=${list.num}">${list.title}</a></td>
-							<td><a class="btn_attach" href="#none" onclick="fileDownload(24)"></a></td>
-							<td>${list.num}</td>
+							<td>${list.name}</td>
 							<td>${regDate}</td>
 							<td>${list.hit}</td>
 						</tr>

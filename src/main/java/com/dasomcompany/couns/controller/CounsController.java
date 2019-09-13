@@ -1,6 +1,8 @@
 package com.dasomcompany.couns.controller;
 
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +42,9 @@ public class CounsController {
 
 	
 	 @RequestMapping(value="counsinsert.do", method = RequestMethod.POST) 
-	 public ModelAndView insert(HttpServletRequest request, ModelAndView mView) {
+	 public ModelAndView insert(HttpServletRequest request, ModelAndView mView) throws UnsupportedEncodingException {
 		 
+		 request.setCharacterEncoding("EUC-KR");
 		 counsService.insertCouns(request); 
 		 
 		 mView.setViewName("couns_write");
@@ -81,9 +84,8 @@ public class CounsController {
 		}
 	
 		 @RequestMapping("update.do") 
-		 public ModelAndView update(HttpServletRequest request,
-				 @ModelAttribute GuestDto dto) {
-			 
+		 public ModelAndView update(HttpServletRequest request,  @ModelAttribute GuestDto dto) throws UnsupportedEncodingException {
+			 request.setCharacterEncoding("EUC-KR");
 			 String title = request.getParameter("title");
 			 System.out.println("title >> " + title);
 			 
