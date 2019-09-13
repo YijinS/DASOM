@@ -3,6 +3,7 @@
 
 <html lang="ko-KR">
 <head>
+<meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 

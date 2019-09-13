@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
 
+	System.out.print("......");
+%>
 <html lang="ko-KR" >
 <head>
 	<meta charset="utf-8">
@@ -12,31 +15,13 @@
 
 </style>
 <body>
-	<div>
 		<div class="">
 			<jsp:include page="comm/header.jsp" />
 			
 		</div>
-		
-		<!-- 견적상담 start -->
-			<div id="dasom_couns">
-			
-			</div>
-			<!-- 견적상담 end -->
-			
-			
-			<!-- footer start  -->
-			<footer>
-				  <p>Posted by: Hege Refsnes</p>
-				  <p>Contact information: <a href="mailto:someone@example.com">
-				  someone@example.com</a>.</p>
-			</footer>
-			<!-- footer end  -->
-	</div>
-	
 	
 	<script>
-		alert("등록되었습니다.");
+		alert("삭제되었습니다.");
 		location.href="${pageContext.request.contextPath }/couns.do";
 	</script>
 
