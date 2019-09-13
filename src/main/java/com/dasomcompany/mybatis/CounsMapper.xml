@@ -11,12 +11,69 @@
 		<result property="hit" column="HIT" />
 	</resultMap>
 	
+	<!-- getcount -->
+	<select id="getCount" parameterType="com.dasomcompany.dto.GuestDto" resultType="int">
+		SELECT NVL(MAX(ROWNUM), 0) FROM GUEST
+		<choose>
+			<when test="title != null and title != ''">
+				WHERE TITLE LIKE '%${title}%'
+			</when>
+			<when test="content != null and content != '' ">
+				WHERE CONTENT LIKE '%${content}%'
+			</when>
+		</choose>
+	</select>
+	
+	<select id="getData" parameterType="int" resultMap="CounsDto">
+	SELECT result1.*
+		FROM
+			(SELECT NUM, TITLE, CONTENT, NAME, PWD, REG_DATE, HIT,
+			LAG(TITLE,1,'이전글') OVER(ORDER BY NUM DESC) AS prevTitle,
+			LAG(NUM, 1, 0) OVER(ORDER BY NUM DESC) AS prevNum,
+			LEAD(NUM, 1, 0) OVER(ORDER BY NUM DESC) AS nextNum,
+			LEAD(TITLE,1,'다음글') OVER(ORDER BY NUM DESC) AS nextTitle
+			FROM GUEST
+			ORDER BY NUM DESC) result1
+		WHERE NUM=#{num}
+	</select>
+	
+	<!-- 견적문의 전체목록 -->
+	<select id="getList" resultMap="CounsDto" parameterType="com.dasomcompany.dto.GuestDto">
+		SELECT * FROM
+		(SELECT result1.*, ROWNUM AS rnum 
+		FROM
+		(SELECT NUM, TITLE, CONTENT, NAME, PWD, REG_DATE, HIT
+		FROM GUEST
+		<choose>
+			<when test="title != null and title != '' ">
+				WHERE TITLE LIKE '%${title}%'
+			</when>
+			<when test="content != null and content != '' ">
+				WHERE CONTENT LIKE '%${content}%'
+			</when>
+		</choose>
+		ORDER BY REG_DATE DESC) result1)
+		WHERE rnum BETWEEN #{startRowNum} AND #{endRowNum}
+	</select>
+		
 	<!-- 견적문의 등록 -->
 	<insert id="insert" parameterType="com.dasomcompany.dto.GuestDto">
 		INSERT INTO GUEST
 		(NUM, TITLE, CONTENT, NAME, PWD, HIT)
 		VALUES(GUEST_SEQ.NEXTVAL, #{title},  #{content}, #{name}, #{pwd}, 0)
 	</insert>
+	
+	<!-- 견적문의 삭제 -->
+	<delete id="delete" parameterType="int">
+		DELETE FROM GUEST WHERE NUM=#{num}
+	</delete>
+	
+	<!-- 견적문의 수정 -->
+	<update id="update" parameterType="com.dasomcompany.dto.GuestDto">
+		UPDATE GUEST
+		SET TITLE = #{title}, CONTENT = #{content}
+		WHERE NUM = ${num}
+	</update>
 
 
 </mapper>

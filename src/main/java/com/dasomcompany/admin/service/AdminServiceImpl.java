@@ -25,7 +25,6 @@ public class AdminServiceImpl implements AdminService {
 
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("id", adminDao.isExist(id));
-		System.out.println("map11111111111111111111111"+map);
 		return map;
 	}
 
@@ -50,7 +49,6 @@ public class AdminServiceImpl implements AdminService {
 		String id = request.getParameter("id");
 		session.setAttribute("admin", adminDao.getData(id));
 		String url = request.getParameter("url");
-		System.out.println("url1111111111111111111"+url);
 		
 		if(url != null && url != "")
 			mView.setViewName("redirect:"+url);

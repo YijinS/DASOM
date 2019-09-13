@@ -15,7 +15,6 @@ public class AdminDaoImpl implements AdminDao {
 	@Override
 	public boolean isExist(String inputId) {
 		String id = sqlSession.selectOne("admin.isExist", inputId);
-		System.out.println("idasdasdasdasd"+id);
 		if(id != null && id != "")	
 			return true;
 		else
