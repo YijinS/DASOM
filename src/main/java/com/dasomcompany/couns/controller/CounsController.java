@@ -22,7 +22,7 @@ public class CounsController {
 	@Autowired
 	private CounsService counsService;
 	
-	/*-------------------견적문의 매핑-----------------------*/
+	/*-------------------寃ъ쟻臾몄쓽 留ㅽ븨-----------------------*/
 	@RequestMapping("couns.do")
 	public ModelAndView couns(HttpServletRequest request, ModelAndView mView) {
 		counsService.getList(request); 
@@ -31,7 +31,7 @@ public class CounsController {
 		
 	}
 	
-	/*-------------------견적문의 입력 매핑-----------------------*/
+	/*-------------------寃ъ쟻臾몄쓽 �엯�젰 留ㅽ븨-----------------------*/
 	@RequestMapping("counsform.do")
 	public ModelAndView counsform(ModelAndView mView) {
 		
@@ -44,7 +44,7 @@ public class CounsController {
 	 @RequestMapping(value="counsinsert.do", method = RequestMethod.POST) 
 	 public ModelAndView insert(HttpServletRequest request, ModelAndView mView) throws UnsupportedEncodingException {
 		 
-		 request.setCharacterEncoding("EUC-KR");
+		 request.setCharacterEncoding("UTF-8");
 		 counsService.insertCouns(request); 
 		 
 		 mView.setViewName("couns_write");
@@ -52,24 +52,24 @@ public class CounsController {
 		 return mView;
 	 }
 	 
-	 /*-------------------견적문의 출력 매핑-----------------------*/
+	 /*-------------------寃ъ쟻臾몄쓽 異쒕젰 留ㅽ븨-----------------------*/
 	 	
 		@RequestMapping("detail.do")
 		public ModelAndView detail(@RequestParam int num, ModelAndView mView) {
 			counsService.getData(num, mView);
-			System.out.println("컨트롤러의 num"+num);
+			System.out.println("而⑦듃濡ㅻ윭�쓽 num"+num);
 			mView.setViewName("couns_detail");
 			return mView;
 		}
 		
 		
-	/*-------------------견적문의 삭제-----------------------*/
+	/*-------------------寃ъ쟻臾몄쓽 �궘�젣-----------------------*/
 		
 		@RequestMapping("delete.do")
 		public String delete(@RequestParam int num) {
 			counsService.delete(num);
 			
-			System.out.print("삭제 완료");
+			System.out.print("�궘�젣 �셿猷�");
 			
 			return "couns_delete";
 		}
@@ -85,7 +85,8 @@ public class CounsController {
 	
 		 @RequestMapping("update.do") 
 		 public ModelAndView update(HttpServletRequest request,  @ModelAttribute GuestDto dto) throws UnsupportedEncodingException {
-			 request.setCharacterEncoding("EUC-KR");
+			 
+			 request.setCharacterEncoding("UTF-8");
 			 String title = request.getParameter("title");
 			 System.out.println("title >> " + title);
 			 

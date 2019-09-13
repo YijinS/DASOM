@@ -23,13 +23,13 @@
                      <c:when test="${empty sessionScope.admin }">
                         <li class="nav-item">
                         <a class="nav-link" href="${pageContext.request.contextPath }/direction.do">오시는 길</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">시공사진</a>
+                        <li class="nav-item"><a class="nav-link"  href="${pageContext.request.contextPath }/portpolio.do" href="#">포트폴리오</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/couns.do">시공후기</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/faq.do">자주 묻는 질문</a>
                         <li class="nav-item form"><a class="nav-link" href="https://form.office.naver.com/form/responseView.cmd?formkey=MjY2OTkwMjAtYTlkYy00YmU3LTlkMGQtMjUzMGNkMmE3NTcy&sourceId=urlshare"  target="_blank">견적문의</a></li>
-                        </li>
+                       
                      </c:when>
                      <c:otherwise>
                         <c:choose>
@@ -43,11 +43,7 @@
                      </c:otherwise>
                   </c:choose>
                </ul>
-               <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search"
-                     placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-               </form>
+              <img src="resources/images/phone.svg" alt="전화하기" style="width: 25px; height: 25px;">
             </div>
          </nav>
       </div>

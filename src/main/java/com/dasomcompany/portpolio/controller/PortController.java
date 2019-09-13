@@ -1,7 +1,5 @@
 package com.dasomcompany.portpolio.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -16,7 +14,6 @@ import com.dasomcompany.myapp.controller.HomeController;
 @Controller
 public class PortController {
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/*
 	 * 시공사진

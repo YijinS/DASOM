@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <html lang="ko-KR" >
 <head>
-	<meta charset="utf-8">
+	
 	<jsp:include page="../inc/incHead.jsp" />
 </head>
 <style>
@@ -80,7 +80,9 @@
 				<div class="row portPolio_body">
 					<div class="col">
 						<div class="dasom_port_img_wrap">
-							<span style="color: white;position: absolute;transition: opacity 0.5s ease;z-index: 11;margin: 167px;padding-left: 61px;">xfdsfsfadfasdf</span>
+							<span style="color: white;position: absolute;transition: opacity 0.5s ease;z-index: 11;margin: 167px;padding-left: 61px;">
+								경기도 고양시 주거지구
+							</span>
 							<img class="dasom_port_img" src="http://hanainterior.net/wp-content/uploads/2019/08/hana_thedong07_225.jpg">
 						</div>
 					</div>
