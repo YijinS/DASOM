@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-<html lang="ko-KR">
+<%
+	request.setCharacterEncoding("UTF-8"); 
+%>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 
@@ -29,7 +30,7 @@
     padding: 5px 15px;
 }
 </style>
-<title>견적 문의</title>
+<title>견적 문의z</title>
 <style>
 </style>
 <body>

@@ -18,9 +18,23 @@
     width: 80%;
 }
 
+.page-display{
+    text-align: center;
+}
+
+.paginate_common{
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+}
+.couns_body{
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
 </style>
 <body>
-	<div>
+<jsp:include page="comm/header.jsp" />
+	<%-- <div>
 		<div class="header_fix">
 	<header>
 
@@ -70,39 +84,39 @@
 			</nav>
 		</div>
 	</header>
-</div>
+</div> --%>
+
 		<div class="head_img_div">
 			<img class="head_img" src="http://hanainterior.net/wp-content/uploads/2017/09/메인슬라이드-3.jpg" >
 		</div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>No</th>
-					<th>제 목</th>
-					<th>글쓴이</th>
-					<th>작성 시간</th>
-					<th>조회수</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="list" items="${list}">
-					<fmt:formatDate value="${list.redDate }" var="regDate"
-						pattern="yyyy-MM-dd" />
+		<div class="container couns_body">
+			<table class="table">
+				<thead>
 					<tr>
-						<td>${list.num}</td>
-						<td style="text-align: left; padding-left: 30px;">
-						<a href="detail.do?num=${list.num}">${list.title}</a></td>
-						<td>${list.name}</td>	
-						<td>${regDate}</td>
-						<td>${list.hit}</td>
+						<th>No</th>
+						<th>제 목</th>
+						<th>글쓴이</th>
+						<th>작성 시간</th>
+						<th>조회수</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<div class="couns_btn_div">
-			<a class="couns_btn"
-				href="${pageContext.request.contextPath }/counsform.do">작성하기</a>
-		</div>
+				</thead>
+				<tbody>
+					<c:forEach var="list" items="${list}">
+						<fmt:formatDate value="${list.redDate }" var="regDate"
+							pattern="yyyy-MM-dd" />
+						<tr>
+							<td>${list.num}</td>
+							<td style="text-align: left; padding-left: 30px;">
+							<a href="detail.do?num=${list.num}">${list.title}</a></td>
+							<td>${list.name}</td>	
+							<td>${regDate}</td>
+							<td>${list.hit}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		
+		
 
 		<!-- 페이지네이션 시작  -->
 		<div class="page-display">
@@ -141,6 +155,15 @@
 		</div>
 		<!-- 페이지네이션 끝 -->
 	</div>
+		<!-- 페이지네이션 끝 -->
+
+		<div class="couns_btn_div">
+			<a class="couns_btn"
+				href="${pageContext.request.contextPath }/counsform.do">작성하기</a>
+		</div>
+
+
+	<!-- 견적상담 end -->
 <jsp:include page="comm/footer.jsp" />
 
 

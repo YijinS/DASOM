@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<html lang="ko-KR">
+
+<html lang="ko">
 <head>
 
 <script src="https://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="UTF-8"></script>
 
 <jsp:include page="../inc/incHead.jsp" />
-<meta charset="utf-8">
+
 </head>
 <title>Dasom Interior</title>
 <style>
@@ -105,7 +105,9 @@
 			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 
 			try {
+				
 				elClickedObj.form.submit();
+				
 			} catch (e) {
 			}
 		}

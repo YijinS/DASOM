@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -10,16 +10,17 @@ h3{text-align: center; margin: 25px;}
 </style>
 <div>
 <div class="container couns_wrap">
-	<h3 class="after">�ټ� �ð��ı�</h3>
+
+	<h3 class="after">다솜 시공후기</h3>
 	
 	<table class="table">
 		<thead>
 			<tr>
 				<th>No</th>
-				<th>�� ��</th>
-				<th>�۾���</th>
-				<th>�ۼ� �ð�</th>
-				<th>��ȸ��</th>
+				<th>제 목</th>
+				<th>글쓴이</th>
+				<th>작성 시간</th>
+				<th>조회수</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -36,7 +37,7 @@ h3{text-align: center; margin: 25px;}
 		</tbody>
 	</table>
 	<div class="couns_btn_div">
-		<a class="couns_btn" href="${pageContext.request.contextPath }/counsform.do" >�ۼ��ϱ�</a>
+		<a class="couns_btn" href="${pageContext.request.contextPath }/counsform.do" >작성하기</a>
 	</div>
 	
 </div>
