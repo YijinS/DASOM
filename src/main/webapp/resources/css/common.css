@@ -8,12 +8,20 @@ h1,h2,h3,h4,h5,h6,h7{
 	font-family: 'Nanum Gothic', sans-serif;
 }
 
+a {color:#222;}
+table, tbody, td, tr{text-align: center;}
+
+li{
+	list-style: none;
+}
+
 .header_fix{
 	z-index: 11;
     position: fixed;
     width: 100%;
 }
-
+.container{border-top: 1px solid #bebebe;}
+.after{padding-right: 100px;}
 .form{padding-left: 8px;}
 
 @media ( max-width : 1199px) {

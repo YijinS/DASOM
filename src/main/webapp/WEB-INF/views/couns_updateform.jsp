@@ -11,7 +11,7 @@
 <jsp:include page="../inc/incHead.jsp" />
 <meta charset="utf-8">
 </head>
-<title>견적 문의</title>
+<title>Dasom Interior</title>
 <style>
 .tbl_board_view tr.prev_next th span {
 	padding-right: 0px;

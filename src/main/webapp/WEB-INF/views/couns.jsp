@@ -4,12 +4,20 @@
 <html lang="ko-KR">
 
 <head>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <jsp:include page="../inc/incHead.jsp" />
 </head>
-<title>견적 문의</title>
+<title>Dasom Interior</title>
 <style>
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+        margin: 100px;
+    /* display: inherit; */
+    width: 80%;
+}
+
 </style>
 <body>
 	<div>
@@ -129,22 +137,9 @@
 						</c:otherwise>
 					</c:choose>
 				</ul>
-<%-- =======
-<jsp:include page="comm/header.jsp" />
-
-	<div class="container">
-		
-			<!-- 견적상담 start -->
-			<div  id="dasom_couns">
-			
->>>>>>> refs/remotes/origin/dasom --%>
 			</div>
 		</div>
 		<!-- 페이지네이션 끝 -->
-
-
-			<!-- 견적상담 end -->
-			
 	</div>
 <jsp:include page="comm/footer.jsp" />
 

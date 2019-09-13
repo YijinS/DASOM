@@ -8,7 +8,7 @@
 <jsp:include page="../inc/incHead.jsp" />
 </head>
 <meta charset="utf-8">
-<title>견적 문의</title>
+<title>Dasom Interior</title>
 <style>
 .tbl_board_view tr.prev_next th span {padding-right: 0px;}
 </style>

@@ -24,8 +24,10 @@ public class CounsController {
 	
 	/*-------------------견적문의 매핑-----------------------*/
 	@RequestMapping("couns.do")
-	public ModelAndView couns(HttpServletRequest request, ModelAndView mView) {
+	public ModelAndView couns(HttpServletRequest request, ModelAndView mView) throws UnsupportedEncodingException {
+		request.setCharacterEncoding("UTF-8");
 		counsService.getList(request); 
+		
 		mView.setViewName("couns");
 		return mView;
 		
@@ -44,7 +46,7 @@ public class CounsController {
 	 @RequestMapping(value="counsinsert.do", method = RequestMethod.POST) 
 	 public ModelAndView insert(HttpServletRequest request, ModelAndView mView) throws UnsupportedEncodingException {
 		 
-		 request.setCharacterEncoding("EUC-KR");
+		 request.setCharacterEncoding("UTF-8");
 		 counsService.insertCouns(request); 
 		 
 		 mView.setViewName("couns_write");
@@ -85,7 +87,7 @@ public class CounsController {
 	
 		 @RequestMapping("update.do") 
 		 public ModelAndView update(HttpServletRequest request,  @ModelAttribute GuestDto dto) throws UnsupportedEncodingException {
-			 request.setCharacterEncoding("EUC-KR");
+			 request.setCharacterEncoding("UTF-8");
 			 String title = request.getParameter("title");
 			 System.out.println("title >> " + title);
 			 

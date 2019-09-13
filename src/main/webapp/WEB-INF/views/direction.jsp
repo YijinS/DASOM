@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <html lang="ko-KR">
 <head>
-<title>오시는 길</title>
+<title>Dasom Interior</title>
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9998f6c6ca885b34262330aeccb175f&libraries=services"></script>
 <link rel='stylesheet'

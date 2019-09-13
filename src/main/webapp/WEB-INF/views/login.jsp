@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>admin login</title>
+<title>Dasom Interior- admin login</title>
 
 <jsp:include page="../inc/incHead.jsp" />
 <link rel='stylesheet'
