@@ -128,14 +128,8 @@
 			</div>
 			<!-- 견적상담 end -->
 			
+			<jsp:include page="comm/footer.jsp" />
 			
-			<!-- footer start  -->
-			<footer>
-				  <p>Posted by: Hege Refsnes</p>
-				  <p>Contact information: <a href="mailto:someone@example.com">
-				  someone@example.com</a>.</p>
-			</footer>
-			<!-- footer end  -->
 		</div>
 	
 	</div>

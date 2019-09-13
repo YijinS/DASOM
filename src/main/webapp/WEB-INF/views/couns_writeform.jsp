@@ -3,14 +3,31 @@
 
 <html lang="ko-KR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 
 <jsp:include page="../inc/incHead.jsp" />
 </head>
+<style>
+
+
+.wd_50{
+	
+	border: none;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 0;
+    margin: 10px 0px;
+}
+.couns_head{
+    text-align: center;
+    font-size: 1.4rem;
+        margin-bottom: 30px;
+}
+.couns_btn{
+    border-radius: 0;
+    padding: 5px 15px;
+}
+</style>
 <title>견적 문의</title>
 <style>
 </style>
@@ -22,41 +39,33 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 		</div>
 		<!-- header end  -->
+		<div class="head_img_div">
+			<img class="head_img" src="http://hanainterior.net/wp-content/uploads/2017/09/메인슬라이드-2.jpg" >
+		</div>
 
 		<div>
-			<div>
-				<h3>견적 문의 등록하기</h3>
+			<div class="container" style="margin-top: 65px; width: 50%;">
+				<div class="couns_head">
+				<span style="margin-bottom: 30px; text-align: center;">견적 문의 등록</span>
+				<i class="fas fa-pen-alt"></i>
+				</div>
 				<form action="counsinsert.do" method="post">
-					<label for="title">이름</label> 
-					<input type="text" class="form-control" name="name" id="name" />
-					<label for="title">비밀번호</label> 
-					<input type="text" class="form-control" name="pwd" id="pwd" />
-					<div class="form-group">
-						<label for="title">제목</label> 
-						<input type="text" class="form-control" name="title" id="title" /> 
-					</div>
+					<input type="text" class="form-control wd_50" name="name" id="name" placeholder="이름"/>
+					<input type="text" class="form-control wd_50" name="pwd" id="pwd"  placeholder="비밀번호"/>
+					<input type="text" class="form-control wd_50" name="title" id="title" placeholder="제목"/> 
 					
-					<label for="content">내용</label>
+					<!-- <label for="content">내용</label> -->
 					<textarea name="content" id="content" style="width: 100%; height: 400px;"></textarea>
-					<div class="text-right">
-						<a href="${pageContext.request.contextPath }/couns.do" class="btn btn-secondary btn-lg">취소</a> 
-						<input type="button"class="btn btn-primary btn-lg" onclick="submitContents(this);" value="등록" />
+					<div class="text-right" style="margin: 15px 0px 30px;">
+						<a href="${pageContext.request.contextPath }/couns.do" class="btn btn-secondary couns_btn">취소</a> 
+						<input type="button"class="btn btn-primary couns_btn" onclick="submitContents(this);" value="등록" />
 					</div>
 				</form>
 			</div>
 		</div>
 
 
-
-		<!-- footer start  -->
-		<footer>
-			<p>Posted by: Hege Refsnes</p>
-			<p>
-				Contact information: <a href="mailto:someone@example.com">
-					someone@example.com</a>.
-			</p>
-		</footer>
-		<!-- footer end  -->
+		<jsp:include page="comm/footer.jsp" />
 	</div>
 	
 	

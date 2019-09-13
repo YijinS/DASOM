@@ -83,6 +83,9 @@ footer {
 	height: 100px;
 	background: #d4d4d4;
 	text-align: center;
+	position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .portPolio_head_h3{
@@ -113,4 +116,12 @@ footer {
     background: #114bb9;
     color: white;
     padding: 7px 17px;
+}
+
+.head_img_div{
+       height: 200px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
 }

@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html lang="ko-KR">
+
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <jsp:include page="../inc/incHead.jsp" />
@@ -81,12 +81,24 @@
 						</c:otherwise>
 					</c:choose>
 				</ul>
+<%-- =======
+<jsp:include page="comm/header.jsp" />
+
+	<div class="container">
+		
+			<!-- 견적상담 start -->
+			<div  id="dasom_couns">
+			
+>>>>>>> refs/remotes/origin/dasom --%>
 			</div>
 		</div>
 		<!-- 페이지네이션 끝 -->
 
 
+			<!-- 견적상담 end -->
+			
 	</div>
+<jsp:include page="comm/footer.jsp" />
 	
 		<!-- footer start  -->
 		<footer>

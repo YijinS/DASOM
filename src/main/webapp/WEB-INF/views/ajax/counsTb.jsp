@@ -8,9 +8,10 @@ h3{text-align: center; margin: 25px;}
 table, tbody, td, tr{text-align: center;}
 .container{border-top: 1px solid #bebebe;}
 a {color:#222;}
+.couns_wrap{border-top: 1px solid #bebebe;}
 </style>
 <div>
-<div class="container">
+<div class="container couns_wrap">
 	<h3>다솜 견적문의</h3>
 	
 	<table class="table">
