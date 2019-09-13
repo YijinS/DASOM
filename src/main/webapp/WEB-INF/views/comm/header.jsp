@@ -25,7 +25,7 @@
 					        <a class="nav-link" href="${pageContext.request.contextPath }/direction.do">오시는 길</a>
 					      </li>
 					      <li class="nav-item">
-					        <a class="nav-link" href="#">시공사진</a>
+					        <a class="nav-link" href="${pageContext.request.contextPath }/portpolio.do">시공사진</a>
 					      </li>
 					      <li class="nav-item">
 					        <a class="nav-link" href="#">시공후기</a>
