@@ -43,7 +43,7 @@
                      </c:otherwise>
                   </c:choose>
                </ul>
-              <img src="resources/images/phone.svg" alt="전화하기" style="width: 25px; height: 25px;">
+              <a href="tel:010-2385-4597"><img src="resources/images/phone.svg" alt="전화하기" style="width: 25px; height: 25px;"></a>
             </div>
          </nav>
       </div>

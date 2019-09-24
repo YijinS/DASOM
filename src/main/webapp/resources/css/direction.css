@@ -18,15 +18,16 @@ html, body {
 	margin-left: 20%;
 }
 
+
 .introduce {
-	margin-top: 50px;
-	padding: 45px;
-	border-top:1.5px solid #cac8c8fa;;
-	border-bottom:1.5px solid #cac8c8fa;;
-	width: 60%;
-	border-left: 100%;
-	margin-left: 20%;
-	text-align: center;
+    margin-top: 50px;
+    padding: 45px;
+    border-top: 1.5px solid #cac8c8fa;
+    border-bottom: 1.5px solid #cac8c8fa;
+    width: 56%;
+    border-left: 100%;
+    margin-left: 22%;
+    text-align: center;
 }
 
 .wrap {
