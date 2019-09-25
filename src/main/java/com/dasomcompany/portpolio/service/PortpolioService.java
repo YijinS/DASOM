@@ -1,13 +1,14 @@
-package com.dasomcompany.couns.service;
+package com.dasomcompany.portpolio.service;
 
 import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dasomcompany.dto.CounsDto;
+import com.dasomcompany.dto.PortpolioDto;
 
+public interface PortpolioService {
 
-public interface CounsService {
-	public void insertCouns(HttpServletRequest request);
+	public void insertPort(HttpServletRequest request);
 
 	public void getList(HttpServletRequest request);
 
@@ -15,7 +16,7 @@ public interface CounsService {
 
 	public void delete(int num);
 
-	public void updateNotice(CounsDto dto);
-
 	public void getUpdateData(int num, ModelAndView mView);
+
+	public void updateNotice(PortpolioDto dto);
 }

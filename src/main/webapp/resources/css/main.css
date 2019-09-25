@@ -15,7 +15,7 @@
 .banner_layer {
 	z-index: 10;
 	position: absolute;
-	margin-top: 10%;
+	margin-top: 15%;
 	font-size: 2rem;
 	color: white;
 	text-align: center;
@@ -100,11 +100,10 @@ footer {
 }
 
 .couns_btn_div{
-	    /* display: inline-block; */
     width: fit-content;
+    margin-top: 10px;
     position: relative;
-    /* float: right; */
-    /* text-align: center; */
+    margin-bottom: 10px;
     align-items: center;
     vertical-align: center;
     width: 100%;
@@ -112,9 +111,9 @@ footer {
 }
 
 .couns_btn{
-	    border: none;
-    background: #114bb9;
-    color: white;
+	border: none;
+    /* background: #ffffff; */
+    color: #fffffc;
     padding: 7px 17px;
 }
 

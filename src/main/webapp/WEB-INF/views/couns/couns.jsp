@@ -1,34 +1,38 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<jsp:include page="../../inc/incHead.jsp" />
+</head>
+<title>Dasom Interior</title>
 <style>
-h3 {
-	text-align: center;
-	margin: 25px;
-}
 
-.container {
-	border-top: 1px solid #bebebe;
-}
-
-.couns_wrap {
-	border-top: 1px solid #bebebe;
+.table {
+    margin-bottom: 1rem;
+    color: #212529;
+    margin: 12px;
+    width: 80%;
 }
 
 </style>
-<div>
-	<div class="container couns_wrap">
-		
+<body>
+<jsp:include page="../comm/header.jsp" />
+	
+
+		<div class="head_img_div">
+			<img class="head_img" src="http://hanainterior.net/wp-content/uploads/2017/09/메인슬라이드-3.jpg" >
+		</div>
+		<div class="container couns_body">
+			
+
 		<div class="couns_btn_div">
 			<a class="couns_btn"
 				href="${pageContext.request.contextPath }/counsform.do">작성하기</a>
 		</div>
-		
-
-		<h3 class="after">다솜 시공후기</h3>
-		<table class="table">
-			<thead>
+			<table class="table">
+				<thead>
 					<tr>
 						<th>No</th>
 						<th>제 목</th>
@@ -47,14 +51,22 @@ h3 {
 						</tr>
 					</c:forEach>
 				</tbody>
-		</table>
+			</table>
+		
 
 		<!-- 페이지네이션 시작 -->
-
+		
 		<jsp:include page="../comm/pagenation.jsp" />
-
+		
 		<!-- 페이지네이션 끝 -->
-
+		
+		
 	</div>
 
-</div>
+
+	<!-- 견적상담 end -->
+<jsp:include page="../comm/footer.jsp" />
+
+
+</body>
+</html>

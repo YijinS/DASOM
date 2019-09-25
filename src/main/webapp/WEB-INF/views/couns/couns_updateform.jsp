@@ -8,7 +8,7 @@
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="UTF-8"></script>
 
-<jsp:include page="../inc/incHead.jsp" />
+	<jsp:include page="../../inc/incHead.jsp" />
 
 </head>
 <title>Dasom Interior</title>
@@ -20,7 +20,7 @@
 <body>
 	<div>
 		<div class="">
-			<jsp:include page="comm/header.jsp" />
+			<jsp:include page="../comm/header.jsp" />
 
 		</div>
 

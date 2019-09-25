@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.dasomcompany.dto.GuestDto;
+import com.dasomcompany.dto.CounsDto;
 
 @Repository
 public class CounsDaoImpl implements CounsDao {
@@ -15,26 +15,25 @@ public class CounsDaoImpl implements CounsDao {
 	private SqlSession session;
 
 	@Override
-	public void insert(GuestDto guestDto) {
+	public void insert(CounsDto guestDto) {
 		
 		session.insert("couns.insert", guestDto);
 	}
 
 	@Override
-	public int getCount(GuestDto dto) {
+	public int getCount(CounsDto dto) {
 		return session.selectOne("couns.getCount", dto);
 	}
 
 	@Override
-	public List<GuestDto> getList(GuestDto dto) {
-		List<GuestDto> list = session.selectList("couns.getList",dto);
+	public List<CounsDto> getList(CounsDto dto) {
+		List<CounsDto> list = session.selectList("couns.getList",dto);
 		return list;
 	}
 
 	@Override
-	public GuestDto getData(int num) {
-		GuestDto dto = session.selectOne("couns.getData",num);
-		System.out.println("Asdffffff"+num);
+	public CounsDto getData(int num) {
+		CounsDto dto = session.selectOne("couns.getData",num);
 		return dto;
 	}
 
@@ -45,8 +44,7 @@ public class CounsDaoImpl implements CounsDao {
 	}
 
 	@Override
-	public void update(GuestDto dto) {
-		System.out.println("Asdffffff"+dto.getNum());
+	public void update(CounsDto dto) {
 		session.update("couns.update", dto);
 		
 	}

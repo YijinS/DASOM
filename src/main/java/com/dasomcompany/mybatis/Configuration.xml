@@ -8,6 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    		<mapper resource="com/dasomcompany/mybatis/AdminMapper.xml"/>
    		<mapper resource="com/dasomcompany/mybatis/CounsMapper.xml"/>
    		<mapper resource="com/dasomcompany/mybatis/FaqMapper.xml"/>
+   		<mapper resource="com/dasomcompany/mybatis/PortpolioMapper.xml"/>
    </mappers>
 </configuration>
 

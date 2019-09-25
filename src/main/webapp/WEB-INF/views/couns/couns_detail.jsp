@@ -5,7 +5,7 @@
 <html lang="ko-KR">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<jsp:include page="../inc/incHead.jsp" />
+	<jsp:include page="../../inc/incHead.jsp" />
 </head>
 <meta charset="utf-8">
 <title>Dasom Interior</title>
@@ -15,7 +15,7 @@
 <body>
 	<div>
 		<div class="">
-			<jsp:include page="comm/header.jsp" />
+			<jsp:include page="../comm/header.jsp" />
 
 		</div>
 		<div>
@@ -34,11 +34,6 @@
 							<th scope="row">제목</th>
 							<td class="subject">${dto.title }</td>
 						</tr>
-						<tr>
-							<th scope="row">등록일</th>
-							<td>${regDate}</td>
-						</tr>
-						
 						<tr>
 							<td colspan="2" class="content">
 								<div>${dto.content }</div>

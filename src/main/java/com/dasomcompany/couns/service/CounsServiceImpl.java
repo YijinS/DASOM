@@ -1,15 +1,12 @@
 package com.dasomcompany.couns.service;
 
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.dasomcompany.dao.CounsDao;
-import com.dasomcompany.dto.GuestDto;
+import com.dasomcompany.dto.CounsDto;
 
 @Service
 public class CounsServiceImpl implements CounsService{
@@ -31,11 +28,11 @@ public class CounsServiceImpl implements CounsService{
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		
-		GuestDto guestDto = new GuestDto();
-		guestDto.setName(name);
-		guestDto.setPwd(pwd);
-		guestDto.setTitle(title);
-		guestDto.setContent(content);
+		CounsDto counsDto = new CounsDto();
+		counsDto.setName(name);
+		counsDto.setPwd(pwd);
+		counsDto.setTitle(title);
+		counsDto.setContent(content);
 		System.out.println();
 		System.out.println();
 		System.out.println("***********ㅈㅈㅈㅈㅈㅈㅈㅈㅈ    "+name+"***********ㅈㅈㅈㅈㅈㅈㅈㅈㅈ    ");
@@ -45,14 +42,14 @@ public class CounsServiceImpl implements CounsService{
 		System.out.println();
 		System.out.println();
 		
-		counsDao.insert(guestDto);
+		counsDao.insert(counsDto);
 		
 		
 	}
 
 	@Override
 	public void getList(HttpServletRequest request) {
-		GuestDto dto = new GuestDto();
+		CounsDto dto = new CounsDto();
 		
 		// 보여줄 페이지의 번호
 		int pageNum = 1;
@@ -84,7 +81,7 @@ public class CounsServiceImpl implements CounsService{
 		dto.setStartRowNum(startRowNum);
 		dto.setEndRowNum(endRowNum);
 		
-		List<GuestDto> list = counsDao.getList(dto);
+		List<CounsDto> list = counsDao.getList(dto);
 		
 		//view 페이지에서 필요한 값을 request 에 담고 
 		request.setAttribute("list", list);
@@ -99,8 +96,7 @@ public class CounsServiceImpl implements CounsService{
 
 	@Override
 	public void getData(int num, ModelAndView mView) {
-		GuestDto dto = counsDao.getData(num);
-		System.out.println("Asdffffff"+num);
+		CounsDto dto = counsDao.getData(num);
 		mView.addObject("dto", dto);
 		
 		
@@ -115,14 +111,13 @@ public class CounsServiceImpl implements CounsService{
 	@Override
 	public void getUpdateData(int num, ModelAndView mView) {
 		
-		GuestDto dto = counsDao.getData(num);
-		System.out.println("Asdffffff"+num);
+		CounsDto dto = counsDao.getData(num);
 		mView.addObject("dto", dto);
 		
 	}
 
 	@Override
-	public void updateNotice(GuestDto dto) {
+	public void updateNotice(CounsDto dto) {
 		counsDao.update(dto);
 		
 	}

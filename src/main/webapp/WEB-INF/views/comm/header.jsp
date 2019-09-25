@@ -23,7 +23,7 @@
                      <c:when test="${empty sessionScope.admin }">
                         <li class="nav-item">
                         <a class="nav-link" href="${pageContext.request.contextPath }/direction.do">오시는 길</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="${pageContext.request.contextPath }/portpolio.do" href="#">포트폴리오</a>
+                        <li class="nav-item"><a class="nav-link"  href="${pageContext.request.contextPath }/portpolio.do" href="#">시공사진</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/couns.do">시공후기</a>
                         </li>

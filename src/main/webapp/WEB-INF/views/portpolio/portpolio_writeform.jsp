@@ -8,7 +8,7 @@
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/SmartEditor/js/HuskyEZCreator.js" charset="utf-8"></script>
 
-<jsp:include page="../inc/incHead.jsp" />
+<jsp:include page="../../inc/incHead.jsp" />
 </head>
 <style>
 
@@ -37,7 +37,7 @@
 	<div>
 		<!-- header start  -->
 		<div class="">
-			<jsp:include page="comm/header.jsp" />
+			<jsp:include page="../comm/header.jsp" />
 
 		</div>
 		<!-- header end  -->
@@ -48,18 +48,29 @@
 		<div>
 			<div class="container" style="margin-top: 65px; width: 50%;">
 				<div class="couns_head">
-				<span style="margin-bottom: 30px; text-align: center;">견적 문의 등록</span>
+				<span style="margin-bottom: 30px; text-align: center;">시공사진 등록</span>
 				<i class="fas fa-pen-alt"></i>
 				</div>
-				<form action="counsinsert.do" method="post">
-					<input type="text" class="form-control wd_50" name="name" id="name" placeholder="이름"/>
-					<input type="text" class="form-control wd_50" name="pwd" id="pwd"  placeholder="비밀번호"/>
+				<form action="portpolioinsert.do" method="post" enctype="multipart/form-data">
 					<input type="text" class="form-control wd_50" name="title" id="title" placeholder="제목"/> 
+				<%-- 	등록 사진: <input type="file" id="main_photo" name="main_photo" />
 					
-					<!-- <label for="content">내용</label> -->
+					 <div class="select_img"><img src="" /></div>
+					 
+					 <script>
+					  $("#main_photo").change(function(){
+					   if(this.files && this.files[0]) {
+					    var reader = new FileReader;
+					    reader.onload = function(data) {
+					     $(".select_img img").attr("src", data.target.result).width(300);        
+					    }
+					    reader.readAsDataURL(this.files[0]);
+					   }
+					  });
+					 </script> --%>
 					<textarea name="content" id="content" style="width: 100%; height: 400px;"></textarea>
 					<div class="text-right" style="margin: 15px 0px 30px;">
-						<a href="${pageContext.request.contextPath }/couns.do" class="btn btn-secondary couns_btn">취소</a> 
+						<a href="${pageContext.request.contextPath }/portpolio.do" class="btn btn-secondary couns_btn">취소</a> 
 						<input type="button"class="btn btn-primary couns_btn" onclick="submitContents(this);" value="등록" />
 					</div>
 				</form>
@@ -67,7 +78,7 @@
 		</div>
 
 
-		<jsp:include page="comm/footer.jsp" />
+		<jsp:include page="../comm/footer.jsp" />
 	</div>
 	
 	
@@ -110,7 +121,6 @@
 		
 	function submitContents(elClickedObj) {
 		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
-		
 		// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
 		
 		try {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="couns">
-	<resultMap type="com.dasomcompany.dto.GuestDto" id="CounsDto">
+	<resultMap type="com.dasomcompany.dto.CounsDto" id="CounsDto">
 		<result property="num" column="NUM" />
 		<result property="title" column="TITLE" />
 		<result property="content" column="CONTENT" />
@@ -12,8 +12,8 @@
 	</resultMap>
 	
 	<!-- getcount -->
-	<select id="getCount" parameterType="com.dasomcompany.dto.GuestDto" resultType="int">
-		SELECT NVL(MAX(ROWNUM), 0) FROM GUEST
+	<select id="getCount" parameterType="com.dasomcompany.dto.CounsDto" resultType="int">
+		SELECT NVL(MAX(ROWNUM), 0) FROM COUNS
 		<choose>
 			<when test="title != null and title != ''">
 				WHERE TITLE LIKE '%${title}%'
@@ -32,18 +32,18 @@
 			LAG(NUM, 1, 0) OVER(ORDER BY NUM DESC) AS prevNum,
 			LEAD(NUM, 1, 0) OVER(ORDER BY NUM DESC) AS nextNum,
 			LEAD(TITLE,1,'다음글') OVER(ORDER BY NUM DESC) AS nextTitle
-			FROM GUEST
+			FROM COUNS
 			ORDER BY NUM DESC) result1
 		WHERE NUM=#{num}
 	</select>
 	
 	<!-- 견적문의 전체목록 -->
-	<select id="getList" resultMap="CounsDto" parameterType="com.dasomcompany.dto.GuestDto">
+	<select id="getList" resultMap="CounsDto" parameterType="com.dasomcompany.dto.CounsDto">
 		SELECT * FROM
 		(SELECT result1.*, ROWNUM AS rnum 
 		FROM
 		(SELECT NUM, TITLE, CONTENT, NAME, PWD, REG_DATE, HIT
-		FROM GUEST
+		FROM COUNS
 		<choose>
 			<when test="title != null and title != '' ">
 				WHERE TITLE LIKE '%${title}%'
@@ -57,20 +57,20 @@
 	</select>
 		
 	<!-- 견적문의 등록 -->
-	<insert id="insert" parameterType="com.dasomcompany.dto.GuestDto">
-		INSERT INTO GUEST
+	<insert id="insert" parameterType="com.dasomcompany.dto.CounsDto">
+		INSERT INTO COUNS
 		(NUM, TITLE, CONTENT, NAME, PWD, HIT)
 		VALUES(GUEST_SEQ.NEXTVAL, #{title},  #{content}, #{name}, #{pwd}, 0)
 	</insert>
 	
 	<!-- 견적문의 삭제 -->
 	<delete id="delete" parameterType="int">
-		DELETE FROM GUEST WHERE NUM=#{num}
+		DELETE FROM COUNS WHERE NUM=#{num}
 	</delete>
 	
 	<!-- 견적문의 수정 -->
-	<update id="update" parameterType="com.dasomcompany.dto.GuestDto">
-		UPDATE GUEST
+	<update id="update" parameterType="com.dasomcompany.dto.CounsDto">
+		UPDATE COUNS
 		SET TITLE = #{title}, CONTENT = #{content}
 		WHERE NUM = ${num}
 	</update>

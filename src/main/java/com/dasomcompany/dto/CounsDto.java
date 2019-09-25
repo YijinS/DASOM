@@ -2,7 +2,7 @@ package com.dasomcompany.dto;
 
 import java.util.Date;
 
-public class GuestDto {
+public class CounsDto {
 	
 	private int num;
 	private String title;
@@ -23,9 +23,9 @@ public class GuestDto {
 	private String prevTitle;
 	private String nextTitle;
 	
-	public GuestDto() {}
+	public CounsDto() {}
 
-	public GuestDto(int num, String title, String content, String name, String pwd, Date redDate, int hit,
+	public CounsDto(int num, String title, String content, String name, String pwd, Date redDate, int hit,
 			int startRowNum, int endRowNum, int prevNum, int nextNum, String prevTitle, String nextTitle) {
 		super();
 		this.num = num;

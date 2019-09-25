@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="portpolio">
+
+	<resultMap type="com.dasomcompany.dto.PortpolioDto"
+		id="PortpolioDto">
+		<result property="num" column="NUM" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="main_photo" column="MAIN_PHOTO" />
+	</resultMap>
+
+	<!-- 시공사진 등록 -->
+	<insert id="insert"
+		parameterType="com.dasomcompany.dto.PortpolioDto">
+		INSERT INTO PORTPOLIO
+		(NUM, TITLE, CONTENT)
+		VALUES(PORTPOLIO_SEQ.NEXTVAL, #{title}, #{content})
+	</insert>
+
+	<!-- 시공사진 전체목록 -->
+	<select id="getList" resultMap="PortpolioDto"
+		parameterType="com.dasomcompany.dto.PortpolioDto">
+		SELECT * FROM PORTPOLIO
+		<choose>
+			<when test="title != null and title != '' ">
+				WHERE TITLE LIKE '%${title}%'
+			</when>
+			<when test="content != null and content != '' ">
+				WHERE CONTENT LIKE '%${content}%'
+			</when>
+		</choose>
+		ORDER BY NUM DESC
+	</select>
+
+	<!-- 시공사진 개별목록 -->
+	<select id="getData" parameterType="int"
+		resultMap="PortpolioDto">
+		SELECT * FROM PORTPOLIO WHERE NUM=#{num} ORDER BY NUM DESC
+	</select>
+
+	<!-- 시공사진 삭제 -->
+	<delete id="delete" parameterType="int">
+		DELETE FROM PORTPOLIO WHERE
+		NUM=#{num}
+	</delete>
+
+	<!-- 시공사진 수정 -->
+	<update id="update"
+		parameterType="com.dasomcompany.dto.PortpolioDto">
+		UPDATE PORTPOLIO
+		SET TITLE = #{title}, CONTENT = #{content}
+		WHERE NUM = ${num}
+	</update>
+
+
+
+
+
+
+
+
+
+
+</mapper>

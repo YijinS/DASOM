@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<jsp:include page="../inc/incHead.jsp" />
+	<jsp:include page="../../inc/incHead.jsp" />
 </head>
 
 <title>Dasom Interior</title>
@@ -26,7 +26,7 @@
 	
 	<script>
 		alert("등록되었습니다.");
-		location.href="${pageContext.request.contextPath }/couns.do";
+		location.href="${pageContext.request.contextPath }/portpolio.do";
 	</script>
 
 </body>
